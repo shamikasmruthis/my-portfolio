@@ -1,19 +1,100 @@
 ---
-
+import Layout from '../layouts/layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="font-sans text-gray-900 p-8">
-    <h1 class="text-3xl font-bold">Hi, I’m Shamika 👋</h1>
-    <p class="mt-2">I design ethical, inclusive product experiences.</p>
-  </body>
-</html>
+<Layout title="Shamika - UX Designer & HCI Researcher">
+  <section class="hero">
+    <h1>hi, i'm shamika.</h1>
+    <p class="subtitle">UX Designer & HCI Researcher</p>
+    <p class="description">
+      designing ethical, accessible, and sustainable digital experiences that center both people and planet.
+    </p>
+    <div class="cta-buttons">
+      <a href="/cv.pdf" class="btn btn-primary">view cv</a>
+      <button class="btn btn-primary" id="copy-email">copy email</button>
+    </div>
+  </section>
+</Layout>
 
+<style>
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 3rem 8rem;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: var(--step-3);
+    color: #713F12;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: var(--step-1);
+    color: #713F12;
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    font-size: var(--step-0);
+    color: #713F12;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+	font-size: var(--step-0);
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Figtree', sans-serif;
+  }
+  
+  .btn-primary {
+    background: #713F12;
+    color: #FEFCE8;
+  }
+  
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
 
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem 6rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('copy-email')?.addEventListener('click', async function() {
+    await navigator.clipboard.writeText('shamikasmruthi@gmail.com');
+    
+    const originalText = this.innerHTML;
+    this.innerHTML = 'copied ✓';
+    
+    setTimeout(() => {
+      this.innerHTML = originalText;
+    }, 2000);
+  });
+</script>

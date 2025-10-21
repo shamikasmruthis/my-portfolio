@@ -1,0 +1,81 @@
+---
+// src/components/Footer.astro
+---
+
+<footer>
+  <div class="footer-content">
+    <p class="copyright">© Shamika Sriram 2025</p>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="/colophon">Colophon</a>
+        <a href="https://www.linkedin.com/in/shamikasmruthi-s/" target="_blank">LinkedIn</a>
+      </div>
+      <p class="sustainability">This website is sustainable & accessible.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 2rem 3rem;
+    background: #FEFCE8;
+    color: #713F12;
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: right;
+    gap: 2rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-links a {
+    color: #713F12;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .sustainability {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      padding: 1.5rem 1.5rem;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    
+    .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem; 
+    }
+  }

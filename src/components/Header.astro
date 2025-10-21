@@ -1,0 +1,51 @@
+---
+// src/components/Header.astro
+---
+
+<header>
+  <nav>
+    <a href="/" class="logo">
+        <img src="/logo.svg" alt="Shamika's logo" />
+    </a>
+    <div class="nav-links">
+      <a href="#projects">projects</a>
+      <a href="#about">about</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 1rem 3rem;
+    background: #FEFCE8;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo img {
+  height: 50px;
+  width: auto;
+  } 
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #713F12;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+</style>
