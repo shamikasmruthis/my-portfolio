@@ -1,0 +1,99 @@
+---
+layout: ../layouts/Layout.astro
+title: "Accessibility Audit - Royal Ballet & Opera"
+---
+import '../styles/project.css';
+import ProjectMeta from '../components/ProjectMeta.astro';
+
+
+# Accessibility audit for the RBO
+
+<ProjectMeta 
+  tldr="Accessibility audit of the Royal Ballet and Opera website identifying 10 critical issues affecting users, particularly in navigation, page structure, and media accessibility."
+  timeline="2 weeks (Nov 19 – Dec 3, 2024)"
+  role="Accessibility expert"
+  team="Solo"
+/>
+
+
+## Problem
+
+The Royal Ballet and Opera website had multiple accessibility barriers preventing users with disabilities from accessing content effectively. This mattered because it excluded significant user demographics including those with visual, mobility, cognitive, and auditory impairments from fully experiencing the website.
+
+## Goals
+
+To evaluate the website's accessibility compliance against WCAG 2.2 Guidelines (up to Level AA conformance) and identify top 10 severe accessibility issues that needed remediation.
+
+## Methods
+
+### Phase 1 (Understanding requirements)
+- Familiarized with UK government user profiles and WCAG 2.2 guidelines
+- Adopted WCAG-EM methodology
+- Performed initial website sweep of homepage and visitor information page
+
+### Phase 2 (Testing)
+- **Automated testing:** WAVE evaluation tool, WebAIM's contrast checker, Luma (for video flashes)
+- **Manual testing:** Cross-checking against WCAG 2.2 Guidelines
+- **Testing with assistive technology:** VoiceOver (Mac screenreader), Chrome Developer tools
+
+### Phase 3 (Reporting)
+- Shortlisted 10 most severe issues with severity ratings based on number of users affected
+- Provided solutions and next steps to the RBO
+
+## Findings
+
+Three key themes emerged:
+
+### 1. Page structure issues
+Missing/empty headings, no semantic markup for page regions
+
+### 2. Navigation challenges
+Keyboard navigation failures (hamburger menu skipped, keyboard traps), missing "skip to main content" option, redundant links causing confusion
+
+### 3. Inaccessible content and media
+Missing form labels and alt text, videos lacking captions/audio descriptions/transcripts, functionality lost when text resized, lengthy/redundant alt text, undefined page language attribute
+
+10 issues identified ranging from high to low severity, affecting users with visual, mobility, cognitive, and auditory impairments.
+
+## Recommendations
+
+### Immediate technical fixes for critical barriers:
+
+**Page structure:**
+- Add proper heading hierarchy
+- Implement semantic HTML tags (`<main>`, `<nav>`, `<footer>`)
+- Create a "skip to main content" link
+
+**Keyboard navigation:**
+- Make the hamburger menu accessible via tab order (tabindex="0")
+- Add escape mechanisms to prevent keyboard traps
+- Ensure all interactive elements are reachable
+
+**Content accessibility:**
+- Add form labels to search bars
+- Provide descriptive alt text for icons and images
+- Include captions and transcripts for all videos
+- Use relative measurements so the site remains functional when users adjust text spacing
+
+### Strategic recommendations for long-term accessibility:
+
+**Reduce cognitive load:** Implement breadcrumbs and signposting for wayfinding, maintain consistent visual design patterns (based on W3C Cognitive and Learning Disabilities Task Force guidelines)
+
+**Champion responsive design:** Ensure the site works across all zoom levels and text format adjustments
+
+**Build capacity:** Provide developer training on writing accessible code from the start
+
+**Move beyond checklists:** Test early and often with actual users with disabilities, as not all accessibility issues appear in automated tools or guidelines
+
+## Reflection
+
+I would give more thought to how I prioritize accessibility issues in future audits. The RBO was already quite compliant and the issues I found were major ones.
+
+Moving forward, I would:
+- Develop clearer criteria for prioritization that balances user needs and business needs
+- Consider multiple factors: number of users impacted, severity of impact, how widespread the issue is across the site, whether it's a design pattern requiring systemic fixes
+- Collect actual data from users and their feedback rather than relying solely on guidelines and my assessment
+
+This would make the audit more actionable and help stakeholders understand not just what needs fixing, but why certain issues should be addressed first based on real user impact data.
+
+

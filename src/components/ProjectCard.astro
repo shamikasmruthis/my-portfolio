@@ -3,12 +3,13 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  link: string;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, link } = Astro.props;
 ---
 
-<article class="project-card">
+<a href={link} class="project-card">
   {image && (
     <div class="project-image">
       <img src={image} alt={title} />
@@ -18,49 +19,54 @@ const { title, description, image } = Astro.props;
     <h3>{title}</h3>
     <p>{description}</p>
   </div>
-</article>
+</a>
 
 <style>
-  .project-card {
-  background: #FEFCE8;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+    .project-card {
+    background: #FEFCE8;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    }
 
-.project-image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  background: #f5f5f5;
-  flex-shrink: 0;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-content {
-  padding: 1.5rem;
-  background: #713F12;
-  color: #FEFCE8;
-  flex-grow: 1;
-  letter-spacing: 0.02em;
-}
-
-h3 {
-  font-size: var(--step-0);
-  margin-bottom: 1rem;
-  font-weight: 400;
-}
-
-p {
-  font-size: var(--step--1);
-  line-height: 1.6;
-}
+    .project-card:hover {
+      transform: translateY(-4px) rotate(1deg);
+    }
+  
+  .project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f5f5f5;
+    flex-shrink: 0;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    background: #713F12;
+    color: #FEFCE8;
+    flex-grow: 1;
+  }
+  
+  h3 {
+    font-size: var(--step-1);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  p {
+    font-size: var(--step--2);
+    line-height: 1.6;
+  }
 </style>

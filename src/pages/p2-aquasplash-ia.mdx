@@ -1,0 +1,75 @@
+---
+layout: ../layouts/Layout.astro
+title: "Information Architecture - AquaSplash Adventures"
+---
+
+import ProjectMeta from '../components/ProjectMeta.astro';
+import '../styles/project.css';
+
+# Navigating adventure sports booking
+
+<ProjectMeta 
+  tldr="Information architecture project designing AquaSplash Adventures, a water adventure sports platform connecting enthusiasts with courses, activities, and certified trainers across global destinations."
+  timeline="3 months (Oct - Dec 2024)"
+  role="UX Researcher & Designer"
+  team="Solo"
+/>
+
+## Problem
+
+The water adventure sports domain is vast, broad, and deeply information-rich, making it challenging to organize content in a way that serves diverse users—from certified adventure enthusiasts to complete beginners—who have different priorities when searching for activities (some prioritize destination, others prioritize sport type).
+
+## Goals
+
+To design a clear, navigable information architecture for a complex, information-rich domain (water adventure sports) that would help users easily find and book appropriate courses and activities based on their preferred search approach (by destination, sport type, or skill level).
+
+## Process
+
+Research → domain model → card sort → tree test → sitemap → user journey → wireframes → evaluation
+
+## Research & Modeling
+
+Interviewed four water sports experts (certified enthusiast, academy owner, trainer, trip organizer) to map the domain's information landscape and identify key concepts that became initial content labels. Created a domain model highlighting entity relationships and importance hierarchies.
+
+## Information Architecture
+
+### Card sorting
+
+**Open card sort** with 6 participants (4 moderated, 2 unmoderated) revealed initial labels ('experiences', 'courses', 'certifications', 'academies') were confusing and overlapping. Renamed to 'activities' and 'courses' for clarity.
+
+**Closed card sort** with 4 participants validated renamed labels and tested a new 'Become a Trainer' heading; 3 of 4 correctly placed certification labels under it.
+
+### Tree testing
+
+Tree testing with 8 participants validated navigation paths but revealed pogo-sticking: 4 of 8 users bounced between 'destinations' and 'activities' when searching for location-specific activities. Retained headings to test search approaches of diverse users (planners/spontaneous travelers).
+
+### Sitemap
+
+Developed final sitemap incorporating findings—a moderate flat hierarchy with refined labels and multiple navigation paths.
+
+## Design
+
+Created user journey mapping the task flow for finding courses through different entry points (browsing by destination vs. sport vs. skill level).
+
+Designed four wireframes visualizing key pages: homepage, destination/course results page with interactive map, course information page, and bookings page.
+
+## Evaluation
+
+Moderated wireframe testing with 3 participants (water sports enthusiast, backpacker, newcomer) using tasks tailored to their profiles. Tested navigation ease, element clarity, and findability through open-ended scenarios.
+
+### Findings
+
+- All 3 users chose destination-first navigation over sport-first, validating its prominence despite tree test concerns: *"Well, surfing is the same everywhere, so wouldn't you want to check out the vibes of the destination?"*
+- Users found text-heavy sections overwhelming and wanted control over information density
+- Map interaction was unclear—users couldn't distinguish between selected regions and potential routes
+- Labeling was clear and navigation intuitive overall
+
+### Iteration
+
+- Maintained destination-first navigation in header despite pogo-sticking, as evaluation confirmed user preference
+- Converted lengthy "What to Expect" sections into expandable dropdown menus, giving users control over information display
+- Added "Selected region: [location]" label to map as a visual signifier clarifying interaction state
+
+## Reflection
+
+This project taught me that testing context matters—tree testing flagged pogo-sticking as problematic, but wireframe evaluation revealed users actually preferred destination-first navigation despite extra clicks. In future work, I'd prototype multiple navigation models earlier to compare efficiency against preference, and invest more in community features like the buddy system, which is culturally fundamental to water sports safety, not just a nice-to-have. Most importantly, I learned that fixing every usability issue isn't always right; sometimes user preference trumps efficiency, and recognizing when to accept that tradeoff requires contextual testing beyond checklists.
