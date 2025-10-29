@@ -76,6 +76,32 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: var(--step--1);
+  border: none;
+  cursor: pointer;
+  font-family: 'Figtree', sans-serif;
+}
+
+.btn-primary {
+  background: #713F12;
+  color: #FEFCE8;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
 @media (max-width: 768px) {
   main {
     padding: 3rem 1.5rem;

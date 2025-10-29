@@ -5,6 +5,7 @@ title: "Information Architecture - AquaSplash Adventures"
 
 import ProjectMeta from '../components/ProjectMeta.astro';
 import '../styles/project.css';
+import '../styles/aquasplash-ia.css';
 
 # Navigating adventure sports booking
 
@@ -25,11 +26,64 @@ To design a clear, navigable information architecture for a complex, information
 
 ## Process
 
-Research → domain model → card sort → tree test → sitemap → user journey → wireframes → evaluation
+<div className="process-linear">
+  <div className="step-item">
+    <div className="step-badge">01</div>
+    <h4>Research</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">02</div>
+    <h4>Domain Model</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">03</div>
+    <h4>Card Sort & Tree Test</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">04</div>
+    <h4>Sitemap</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">05</div>
+    <h4>User journeys</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">06</div>
+    <h4>Wireframes</h4>
+  </div>
+
+  <div className="arrow">→</div>
+
+  <div className="step-item">
+    <div className="step-badge">07</div>
+    <h4>Evaluations</h4>
+  </div>
+</div>
+
 
 ## Research & Modeling
 
 Interviewed four water sports experts (certified enthusiast, academy owner, trainer, trip organizer) to map the domain's information landscape and identify key concepts that became initial content labels. Created a domain model highlighting entity relationships and importance hierarchies.
+
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/domain-model.webp" alt="Domain model of water adventure sports based on interviews with experts" />
+    <p className="caption">Domain Model</p>
+  </div>
 
 ## Information Architecture
 
@@ -47,11 +101,40 @@ Tree testing with 8 participants validated navigation paths but revealed pogo-st
 
 Developed final sitemap incorporating findings—a moderate flat hierarchy with refined labels and multiple navigation paths.
 
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/sitemap.webp" alt="Sitemap of website based on results of card sorts and tree tests" />
+    <p className="caption">Sitemap</p>
+  </div>
+
 ## Design
 
 Created user journey mapping the task flow for finding courses through different entry points (browsing by destination vs. sport vs. skill level).
 
 Designed four wireframes visualizing key pages: homepage, destination/course results page with interactive map, course information page, and bookings page.
+
+<div className="wireframe-1-2">
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/wireframe-1.webp" alt="Sitemap of website based on results of card sorts and tree tests" />
+    <p className="caption">Homepage</p>
+  </div>
+
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/wireframe-2.webp" alt="Sitemap of website based on results of card sorts and tree tests" />
+    <p className="caption">Map-first Search</p>
+  </div>
+</div>
+
+<div className="wireframe-3-4">
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/wireframe-3.webp" alt="Sitemap of website based on results of card sorts and tree tests" />
+    <p className="caption">Course Details</p>
+  </div>
+
+<div className="ia-image">
+    <img src="/images/aquasplash-IA/wireframe-4.webp" alt="Sitemap of website based on results of card sorts and tree tests" />
+    <p className="caption">Booking Page</p>
+  </div>
+</div>
 
 ## Evaluation
 
@@ -72,4 +155,6 @@ Moderated wireframe testing with 3 participants (water sports enthusiast, backpa
 
 ## Reflection
 
-This project taught me that testing context matters—tree testing flagged pogo-sticking as problematic, but wireframe evaluation revealed users actually preferred destination-first navigation despite extra clicks. In future work, I'd prototype multiple navigation models earlier to compare efficiency against preference, and invest more in community features like the buddy system, which is culturally fundamental to water sports safety, not just a nice-to-have. Most importantly, I learned that fixing every usability issue isn't always right; sometimes user preference trumps efficiency, and recognizing when to accept that tradeoff requires contextual testing beyond checklists.
+This project taught me that testing context matters. Even though tree testing flagged pogo-sticking as problematic, wireframe evaluation revealed users actually preferred destination-first navigation despite extra clicks. In future work, I'd prototype multiple navigation models earlier to compare efficiency against preference through A/B testing. 
+
+Most importantly, I learned that fixing every usability issue isn't always right; sometimes user preference trumps efficiency, and recognizing when to accept that tradeoff requires contextual testing beyond checklists.
