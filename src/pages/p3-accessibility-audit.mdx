@@ -5,6 +5,7 @@ title: "Accessibility Audit - Royal Ballet & Opera"
 import Layout from '../layouts/Layout.astro'
 import '../styles/project.css';
 import ProjectMeta from '../components/ProjectMeta.astro';
+import '../styles/accessibility-audit.css';
 
 <Layout>
 # Accessibility audit for the RBO
@@ -17,15 +18,40 @@ import ProjectMeta from '../components/ProjectMeta.astro';
 />
 
 
-## Problem
+## Brief
 
-The Royal Ballet and Opera website had multiple accessibility barriers preventing users with disabilities from accessing content effectively. This mattered because it excluded significant user demographics including those with visual, mobility, cognitive, and auditory impairments from fully experiencing the website.
+The Royal Ballet and Opera website wanted an accessibility audit of their 'about' and 'visitor information' pages. 
 
 ## Goals
 
-To evaluate the website's accessibility compliance against WCAG 2.2 Guidelines (up to Level AA conformance) and identify top 10 severe accessibility issues that needed remediation.
+1. Evaluate the website's accessibility compliance against WCAG 2.2 Guidelines (up to Level AA conformance)
+2. Evaluate with assistive technology (Screenreaders and text-to-speech)
+3. Manually test against best web practices for disabled and neurodivergent users.
 
-## Methods
+Identify criteria to prioritize top 10 severe accessibility issues that need remediation.
+
+## Process
+
+<div className="process-linear">
+  <div className="step-item">
+    <div className="step-badge">01</div>
+    <h4>Understanding requirements</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">02</div>
+    <h4>Automated & Manual Testing</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">03</div>
+    <h4>Prioritizing and Reporting issues</h4>
+  </div>
+</div>
 
 ### Phase 1 (Understanding requirements)
 - Familiarized with UK government user profiles and WCAG 2.2 guidelines
@@ -38,23 +64,50 @@ To evaluate the website's accessibility compliance against WCAG 2.2 Guidelines (
 - **Testing with assistive technology:** VoiceOver (Mac screenreader), Chrome Developer tools
 
 ### Phase 3 (Reporting)
-- Shortlisted 10 most severe issues with severity ratings based on number of users affected
+- Shortlisted 10 most severe issues with severity ratings based on number of users affected and how widespread the issue was
 - Provided solutions and next steps to the RBO
 
 ## Findings
 
-Three key themes emerged:
+Problems were clustered under these overarching issues:
 
-### 1. Page structure issues
-Missing/empty headings, no semantic markup for page regions
+<section class="issues">
+  <div class="issue">
+    <div class="issue-text">
+      <h3>Page structure issues</h3>
+      <p>Both pages had missing or empty headings that left gaps in the content hierarchy. They lacked semantic HTML markup to distinguish between headers, navigation, main content, and footers, making it difficult for assistive technology users to understand how the page was organized.</p>
+    </div>
+    <div class="issue-image">
+      <img src="/images/accessibility/headings.webp" alt="Example of incorrect page structure" />
+      <p class="caption">Example of missing headings</p>
+    </div>
+  </div>
 
-### 2. Navigation challenges
-Keyboard navigation failures (hamburger menu skipped, keyboard traps), missing "skip to main content" option, redundant links causing confusion
+  <div class="issue reverse">
+    <div class="issue-text">
+      <h3>Navigation challenges</h3>
+      <p>The hamburger menu at 150% zoom was inaccessible via keyboard (skipped in tab order and created keyboard traps when forcefully accessed). There was no "skip to main content" link for users to bypass repetitive navigation, and redundant links (where images and adjacent buttons led to the same destination) created confusion about page relationships.</p>
+    </div>
+    <div class="issue-image">
+      <img src="/images/accessibility/keyboard-trap.webp" alt="Image demonstrates keyboard trap issue at 150% zoom with an arrow pointing at a highlighted link and says: Links outside of menu being focused but user is caught in keyboard trap" />
+      <p class="caption">Keyboard trap at 150% zoom</p>
+    </div>
+  </div>
 
-### 3. Inaccessible content and media
-Missing form labels and alt text, videos lacking captions/audio descriptions/transcripts, functionality lost when text resized, lengthy/redundant alt text, undefined page language attribute
+  <div class="issue">
+    <div class="issue-text">
+      <h3>Inaccessible content and media</h3>
+      <p>Alt text was either too lengthy or redundant in many places. Search bars lacked form labels and icons lacked alt text. Videos had no captions or audio descriptions for users with hearing or visual impairments. The site lost critical functionality (search and basket icons disappeared) when text spacing was adjusted for readability.  The page language attribute was undefined which could confuse screen readers.</p>
+    </div>
+    <div class="issue-image">
+      <img src="/images/accessibility/inaccessible-content.webp" alt="Images is a compilation of three screenshots from WAVE accessibility checker that detected multiple instances of redundant and lengthy alt text" />
+      <p class="caption">Redundant and lengthy alt text detected by WAVE</p>
+    </div>
+  </div>
+</section>
 
-10 issues identified ranging from high to low severity, affecting users with visual, mobility, cognitive, and auditory impairments.
+
+10 issues were identified ranging from high to low severity, affecting users with visual, mobility, cognitive, and auditory impairments.
 
 ## Recommendations
 
