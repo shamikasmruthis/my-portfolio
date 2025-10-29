@@ -7,6 +7,12 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   integrations: [mdx()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    resolve: {
+      extensions: ['.astro', '.js', '.ts', '.mdx']
+    }
   }
 });
+
+
+
