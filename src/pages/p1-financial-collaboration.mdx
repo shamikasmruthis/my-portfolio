@@ -5,104 +5,213 @@ title: "Financial Collaboration Research - Indian Households"
 
 import ProjectMeta from '../components/ProjectMeta.astro';
 import '../styles/project.css';
+import '../styles/financial-collab.css';
 
 # Designing for financial collaboration
 
 <ProjectMeta 
-  tldr="Indian households manage money collaboratively, but digital banking systems are built for individuals. Through diary studies and co-design workshops with 11 women, I documented how families navigate this mismatch and developed design principles that support and enable collaboration in households."
-  timeline="July - Oct 2024"
+  tldr="Managing money is social, but digital financial systems assume individual use. Through diary studies and co-design workshops, I documented how Indian families navigate this mismatch and developed design principles that support and enable collaboration in households."
+  timeline="Jul - Sep 2025"
   role="UX Researcher and Designer"
   team="Solo"
 />
 
 ## Problem
 
-Financial management in households is inherently collaborative, yet digital financial systems are designed for individual use. Existing research focuses on Western contexts or low-income households in India, leaving the collaborative practices of digitally-active households understudied. Current systems offer only rigid solutions like joint accounts, failing to accommodate the fluid, negotiated nature of household financial collaboration.
+In India, families coordinate finances across multiple accounts and generations, yet every financial apps take an individualistic approach.
+
+Joint accounts are often cited as the standard solution for shared finances, but existing studies show they are rarely used for collaboration. They cannot accommodate the fluid way families negotiate spending, share access, and pool resources informally.
+
+## Opportunity
+
+HMW design financial systems to support collaboration in a way that reflects lived practices?
 
 ## Goals
 
-- Document collaborative financial practices across diverse Indian household structures
-- Identify gaps between user needs and current digital financial system capabilities
-- Formulate design principles to enable support and collaboration in financial digital applications
+  1. Document collaborative financial practices across diverse Indian household structures
+  2. Identify gaps between user needs and current digital financial system capabilities
+  3. Formulate design principles to enable support and collaboration in financial digital applications
 
-## Methods
+## Process
 
-diary studies → follow-up interviews → analysis → co-design workshops → analysis → design recommendations
+<div className="process-linear">
+  <div className="step-item">
+    <div className="step-badge">01</div>
+    <h4>Diary Studies</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">02</div>
+    <h4>Interviews</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">03</div>
+    <h4>Thematic Analysis</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">04</div>
+    <h4>Co-Design Workshops</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">05</div>
+    <h4>Synthesis</h4>
+  </div>
+  
+  <div className="arrow">→</div>
+  
+  <div className="step-item">
+    <div className="step-badge">06</div>
+    <h4>Design Recommendations</h4>
+  </div>
+</div>
 
 ### Phase 1: Diary Studies
 
-I recruited 11 women across India who actively manage household finances, from three-generation homes to young professionals living with parents to couples managing money together.
+I recruited 11 women across India who actively manage household finances, from three-generation homes to young professionals living with parents, to couples managing money together.
 
 Participants captured moments of financial collaboration over one week—planning expenses, paying bills, negotiating budgets, or thinking "I should tell my partner about this purchase." They chose their format (Excel, WhatsApp, or forms) to make logging feel natural.
+
+<div className="diary-gallery">
+  <div className="diary-item">
+    <img src="/images/financial-collab/diary-excel.webp" alt="Excel spreadsheet showing diary entry format with columns for situation, collaboration details, and tools used" />
+    <p className="caption">Excel format: Structured logging with predefined categories</p>
+  </div>
+  
+  <div className="diary-item">
+    <img src="/images/financial-collab/diary-whatsapp.webp" alt="WhatsApp chat screenshot showing participant sending diary entry about grocery shopping and UPI payment tracking" />
+    <p className="caption">WhatsApp format: Quick voice notes and text messages</p>
+  </div>
+  
+  <div className="diary-item">
+    <img src="/images/financial-collab/diary-form.webp" alt="Google Form with text fields asking about financial moments, decision-making, and tools used" />
+    <p className="caption">Form format: Guided prompts for consistent entries</p>
+  </div>
+</div>
 
 I collected 101 entries spanning quick grocery decisions to long-term investment planning. Daily check-ins sustained engagement. After each week, I conducted 45-minute interviews to understand not just what happened, but why households operate this way.
 
 Thematic analysis in NVivo revealed five patterns around responsibility division, tool preferences, and the tracking challenges households face.
 
+
 ### Phase 2: Co-Design Workshops
 
 I ran three remote workshops (3 participants each) exploring "How might we build financial awareness so everyone feels involved and informed?"
 
-In the first activity, groups discussed four real scenarios from the diary studies. What should the "budget system" say, think, do, and feel? Scenarios addressed visibility gaps, accountability needs, and technical comfort levels.
+In the **first activity**, groups discussed four real scenarios from the diary studies. What should the "budget system" say, think, do, and feel? Scenarios addressed visibility gaps, accountability needs, and technical comfort levels.
 
-In the second activity, participants individually visualized their ideal system using images and notes on FigJam boards.
+<div className="workshop-images">
+  <div className="workshop-item">
+    <img src="/images/financial-collab/Workshops_activity1_1.webp" alt="Workshop activity board explaining the goal and how it works to partcipants" />
+    <p className="caption">Figjam board explaining Activity 1</p>
+  </div>
+  
+  <div className="workshop-item">
+    <img src="/images/financial-collab/Workshops_activity1_2.webp" alt="Excerpt of workshop board with sticky notes from a workshop addressing scenarios on accountability and budgeting" />
+    <p className="caption">Participants discussing and writing notes for accountability and budgeting scenarios</p>
+  </div>
+</div>
 
-Analysis mapped their ideas across financial management stages (Plan, Act, Track, Analyze, Adjust) and the spectrum of human control versus system automation. Participants wanted tools that support their decisions without removing agency.
+
+In the **second activity**, participants individually visualized their ideal system using images and notes on FigJam boards.
+
+<div className="analysis-images">
+  <div className="analysis-item contained">
+    <img src="/images/financial-collab/Workshops_activity2_1.webp" alt="Description of first image" />
+    <p className="caption">Figjam board explaining Activity 2</p>
+  </div>
+  
+  <div className="analysis-item full-width">
+    <img src="/images/financial-collab/Workshops_activity2_2.webp" alt="Description of second image" />
+    <p className="caption">Participants indivdually visualized a collaborative system</p>
+  </div>
+</div>
+
+
+Analysis mapped their ideas across financial management stages (Plan, Act, Track, Analyze, Adjust) and the spectrum of human control versus system automation. Participants **wanted tools that support their decisions without removing agency.**
 
 ## Findings
 
-### Cultural Insight: "It's My Money But It's Our Money"
+Findings are organized to show how families actually collaborate alongside the system limitations they face.
 
-Indian families operate with shared financial consciousness despite individual bank accounts. Family members know each other's passwords, share cards, and pool resources without strict settlement practices.
+<div className="behavior-mismatch">
+  
+  <div className="mismatch-row">
+    <div className="behavior-box">
+      <h3>Shared Money, Individual Systems</h3>
+      <p>Indian families treat money collectively, for example sharing passwords and cards. Women manage household finances by receiving contributions, paying bills, raising spending awareness. Tasks divide by tech-savviness: young adults handle auto-pay, parents manage manual bills.</p>
+    </div>
+    <div className="arrow-connector">→</div>
+    <div className="mismatch-box">
+      <p>Banks treat password-sharing as policy violations. Joint accounts are too rigid for fluid collaboration. Systems enforce separation, forcing risky informal workarounds.</p>
+    </div>
+  </div>
 
-### Key Collaborative Behaviors
+  <div className="mismatch-row">
+    <div className="behavior-box">
+      <h3>Scattered Visibility</h3>
+      <p>Multiple people using multiple accounts, cards, and apps create incomplete household pictures. Participants forgot to track expenses, lost track across platforms, found themselves asking "where did the money go?"</p>
+    </div>
+    <div className="arrow-connector">→</div>
+    <div className="mismatch-box">
+      <p>No joint accounts means no collective view. Systems don't sync household information. Participants wanted categorical summaries and bill payment notifications, not itemized transaction transparency.</p>
+    </div>
+  </div>
 
-**Fluid responsibility:** Tasks assigned by tech-savviness and convenience, not rigid rules
+  <div className="mismatch-row">
+    <div className="behavior-box">
+      <h3>Accessibility Barriers</h3>
+      <p>Older members intimidated by complicated interfaces. Large learning curves deter use. Security and privacy concerns prevent linking accounts to third-party apps.</p>
+    </div>
+    <div className="arrow-connector">→</div>
+    <div className="mismatch-box">
+      <p>Systems assume uniform digital literacy. Complicated tools exclude family members from participating in household financial management.</p>
+    </div>
+  </div>
 
-**Care work by women:** Mothers typically manage household expenses across generations
+  <div className="mismatch-row">
+    <div className="behavior-box">
+      <h3>Tracking Burden</h3>
+      <p>Everyone wanted spending analysis. No one wanted constant manual logging. Households use "good enough" methods—rough limits, general awareness. They need lightweight accountability (who paid what) without rigorous monitoring.</p>
+    </div>
+    <div className="arrow-connector">→</div>
+    <div className="mismatch-box">
+      <p>Transaction data already exists in bank statements but categorization is inaccurate. Participants reluctant to grant third-party apps access. Systems demand manual entry or nothing.</p>
+    </div>
+  </div>
+</div>
 
-**Knowledge sharing:** Parents guide children; families leverage each other's financial instruments for optimal benefits
+## Design Recommendations
 
-**Negotiated spending:** Communication before large purchases; collective compromise and prioritization
+### From "Shared Money, Individual Systems" → Support collaborative visibility without enforcing transparency
 
-### System Mismatches
+Families want awareness, not surveillance. Design configurable broadcasts where members choose which financial updates to share (rent paid, grocery spending). Provide periodic household summaries showing categorical spending patterns *based on the information shared.*
+### From "Scattered Visibility" + "Accessibility Barriers" → Design for universal accessibility
 
-**Lack of awareness:** Scattered systems create incomplete household financial pictures
+Fragmented systems exclude less tech-savvy members. Integrate with familiar channels families already use: WhatsApp notifications for bill payments or cross-device widgets syncing information. Present data in multiple formats (graphical and textual) with progressive disclosure. Offer simple views for quick glances and advanced views for detailed analysis, accommodating different comfort levels across generations.
 
-**Inaccessibility:** Steep learning curves exclude less tech-savvy members
+### From "Tracking Burden" → Reduce manual effort by leveraging existing data
 
-**Tracking burden:** Manual logging feels cumbersome; existing bank data poorly categorized
+Transaction data already exists in banking apps and UPI statements. Allow users to appropriate these systems by setting custom categories that match their spending, and configure budget alerts at their thresholds. Support their "good enough" methods (rough limits, general awareness) rather than demanding constant logging. Add social tracking features (tag who paid) for lightweight accountability without the need to rigidly track spending.
 
-### Workshop Insights
-
-Participants mapped needs across financial stages, requesting automation while maintaining control. Key desires: system as "co-planner" for goals, just-in-time budget alerts, auto-tracking with flexible inputs, graphical analysis with abstracted sharing, and intelligent adjustment suggestions with final user say.
-
-## Recommendations
-
-### 1. Support Collaborative Visibility Without Enforcing Transparency
-
-- Configurable broadcasts letting members decide which updates to share
-- Periodic household spending summaries surfacing patterns
-- Abstract information sharing (categorical spending vs. itemized transactions)
-
-### 2. Design for Universal Accessibility
-
-- Multiple format presentation (graphical + textual) with progressive disclosure
-- Platform flexibility integrating with familiar channels (WhatsApp notifications, cross-device widgets)
-- Simple and advanced views accommodating different comfort levels
-
-### 3. Reduce Manual Effort by Leveraging Existing Data
-
-- Allow appropriation of banking apps (custom categories, budget alerts)
-- Support "good enough" methods (rough budget limits, general awareness)
-- Social tracking features (tagging who paid) enabling lightweight accountability
-
-**Core philosophy:** Adapt existing systems to fit collaborative practices rather than forcing households to adopt entirely new tools.
+> **Core philosophy:** Adapt existing systems to fit collaborative practices rather than forcing households to adopt entirely new tools.
 
 ## Reflection
 
-Participants didn't perceive individualized banking as frustrating—they'd built collaborative workarounds around rigid systems. The real issue isn't user dissatisfaction but systemic invisibility of household practices in financial design. This suggests the solution isn't reinventing banking but making existing tools appropriable for collaboration.
+Participants didn't perceive individualized banking as frustrating. They'd built collaborative workarounds around rigid systems. The real issue isn't user dissatisfaction but systemic invisibility of household practices in financial design. This suggests the solution isn't reinventing banking but making existing tools **appropriable** for collaboration.
 
-### Future Directions
+## Future Directions
 
-AI-enabled financial collaboration holds promise but requires careful exploration of consent, trust, and household autonomy. How might AI act as a "fifth household member"—a co-planner that assists without controlling? What safeguards prevent harmful advice for vulnerable users?
+AI-enabled financial collaboration holds promise but requires careful exploration of consent, trust, and household autonomy. How might AI act as a "fifth household member", a co-planner, that assists without controlling? What safeguards prevent harmful advice for vulnerable users?
+
+If your work explores this, please send a message! I'm interested in exploring the intersection of AI, finance and trust.

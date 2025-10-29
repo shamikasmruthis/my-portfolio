@@ -1,0 +1,280 @@
+.annotation {
+  position: absolute;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: #ef4444; /* red for that pen feel */
+  transform: rotate(-3deg);
+  pointer-events: none; /* won't interfere with clicking */
+}
+
+.annotation.left {
+  left: -200px;
+  width: 180px;
+}
+
+.annotation.right {
+  right: -200px;
+  width: 180px;
+}
+
+/* Arrow using CSS */
+.annotation::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #ef4444;
+  transform: rotate(20deg);
+}
+
+.annotation.left::after {
+  right: -35px;
+  top: 50%;
+}
+
+.annotation.right::after {
+  left: -35px;
+  top: 50%;
+}
+
+/*process diagram css*/
+
+.process-linear {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-badge {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: 3px solid #713F12;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #713F12;
+  font-size: 1rem;
+}
+
+.step-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #713F12;
+}
+
+.arrow {
+  color: #713F12;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .process-linear {
+    gap: 1rem;
+  }
+  
+  .step-item h4 {
+    font-size: 0.9rem;
+  }
+  
+  .step-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .process-linear {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+
+/* diary entry input image css*/
+
+.diary-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  margin: 3rem 0;
+  align-items: start;
+}
+
+.diary-item:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.diary-item:nth-child(3) img {
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.diary-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #713F12;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 968px) {
+  .diary-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .diary-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* codesign workshop activity 1 image css*/
+
+.workshop-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.workshop-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.workshop-item img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.workshop-item .caption {
+  text-align: center;
+}
+
+.analysis-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.analysis-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.analysis-item.contained img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.analysis-item.full-width {
+  width: 120%;
+  max-width: 1600px;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.analysis-item.full-width img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+/*findings mismatch*/
+
+.behavior-mismatch {
+  margin: 3rem 0;
+}
+
+.column-headers {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+.column-headers h4:last-child {
+  grid-column: 3;
+}
+
+.mismatch-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.behavior-box,
+.mismatch-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #713F12;
+}
+
+.behavior-box h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.behavior-box p,
+.mismatch-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.arrow-connector {
+  font-size: 2rem;
+  color: #713F12;
+  text-align: center;
+}
+
+@media (max-width: 968px) {
+  .column-headers,
+  .mismatch-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .arrow-connector {
+    transform: rotate(90deg);
+  }
+}
