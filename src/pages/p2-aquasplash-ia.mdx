@@ -1,12 +1,13 @@
 ---
-layout: ../layouts/Layout.astro
+
 title: "Information Architecture - AquaSplash Adventures"
 ---
-
+import Layout from '~/layouts/Layout.astro'
 import ProjectMeta from '../components/ProjectMeta.astro';
 import '../styles/project.css';
 import '../styles/aquasplash-ia.css';
 
+<Layout>
 # Navigating adventure sports booking
 
 <ProjectMeta 
@@ -158,3 +159,5 @@ Moderated wireframe testing with 3 participants (water sports enthusiast, backpa
 This project taught me that testing context matters. Even though tree testing flagged pogo-sticking as problematic, wireframe evaluation revealed users actually preferred destination-first navigation despite extra clicks. In future work, I'd prototype multiple navigation models earlier to compare efficiency against preference through A/B testing. 
 
 Most importantly, I learned that fixing every usability issue isn't always right; sometimes user preference trumps efficiency, and recognizing when to accept that tradeoff requires contextual testing beyond checklists.
+
+</Layout>
